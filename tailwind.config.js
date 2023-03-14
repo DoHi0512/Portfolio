@@ -28,7 +28,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["NanumBarunGothic"],
+        sans: ["SeoulHangangM"],
       },
       keyframes: {
         typingCursor: {
@@ -37,9 +37,16 @@ module.exports = {
           },
           to: { borderRight: "2px solid black" },
         },
+        fadeIn: {
+          from: {
+            opacity: "0",
+          },
+          to: { opacity: "1" },
+        },
       },
       animation: {
         typingCursor: "typingCursor 1s ease-in-out 0ms 2",
+        fadeIn : "fadeIn 1s ease-in-out 6800ms 1 forwards"
       },
     },
   },
