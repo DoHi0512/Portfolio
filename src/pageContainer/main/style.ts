@@ -5,6 +5,7 @@ relative
 w-screen
 h-screen
 flex
+flex-col
 justify-center
 items-center
 `;
@@ -20,13 +21,27 @@ font-thin
 
 export const NavBar = tw.div`
 absolute
-bg-gray 
 text-5xl
 flex
-flex-row
+flex-col
 justify-around
+left-[5%]
+h-[70%]
 `;
 
 export const NavLink = tw.div`
-
+opacity-0
+animate-fadeInLeft
+hover:cursor-pointer
 `;
+
+export const More = tw.div`
+border-2
+border-solid
+mt-20
+animate-fadeIn
+opacity-0
+flex
+justify-center
+items-center
+`
