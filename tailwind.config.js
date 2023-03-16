@@ -20,6 +20,9 @@ module.exports = {
       1000: "1000ms",
       1100: "1100ms",
     },
+    colors: {
+      gray: "#777777",
+    },
     mr: {
       left: "100rem",
     },
@@ -43,10 +46,21 @@ module.exports = {
           },
           to: { opacity: "1" },
         },
+        fadeInLeft: {
+          "0%": {
+            opacity: "0",
+            transform: "translate3d(-100%,0,0)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateZ(0)",
+          },
+        },
       },
       animation: {
         typingCursor: "typingCursor 1s ease-in-out 0ms 2",
-        fadeIn : "fadeIn 1s ease-in-out 6800ms 1 forwards"
+        fadeIn: "fadeIn 1s ease-in-out 4000ms 1 forwards",
+        fadeInLeft: "fadeInLeft 1s ease-in-out 4000ms 1 forwards",
       },
     },
   },
