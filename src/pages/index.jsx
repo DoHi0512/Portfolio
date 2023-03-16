@@ -28,7 +28,7 @@ const Home = () => {
         wheel: true,
         mouse: true,
         touch: true,
-        keydown: false,
+        keydown: true,
       },
       easing: (currentTime, startPos, endPos, interval) => {
         return (
