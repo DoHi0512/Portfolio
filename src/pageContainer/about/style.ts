@@ -2,8 +2,8 @@ import tw from "tailwind-styled-components";
 
 export const AboutLayout = tw.div`
 bg-[#E8F8EC]
-w-screen
-h-screen
+w-full
+h-full
 flex
 justify-center
 relative

@@ -13,3 +13,7 @@
 .pg-wrapper {
   height: auto !important;
 }
+
+html {
+  width: 1000px;
+}
