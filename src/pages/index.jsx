@@ -1,16 +1,14 @@
 import { MainPage } from "@/pageContainer/main";
-import type { NextPage } from "next";
 import { AboutPage } from "@/pageContainer/about";
-import ReactFullpage, { fullpageApi } from "@fullpage/react-fullpage";
-import { useState } from "react";
 import { useEffect, useRef } from "react";
 import { useRecoilState } from "recoil";
 import { ScrollState } from "./_app";
 import { Header } from "@/components/header";
-const Home: NextPage = () => {
+import { Projects } from "@/components/projects";
+const Home = () => {
   const [scroll, setScroll] = useRecoilState(ScrollState);
-  const containerRef = useRef<any>(null);
-  const pageableRef = useRef<any>(null);
+  const containerRef = useRef(null);
+  const pageableRef = useRef(null);
   const loadPageable = async () => {
     const Pageable = (await import("pageable")).default;
     const pageable = new Pageable(containerRef.current, {
@@ -20,7 +18,7 @@ const Home: NextPage = () => {
       animation: 500,
       delay: 0,
       throttle: 50,
-      orientation: "vertical" as "vertical" | "horizontal",
+      orientation: "vertical" | "horizontal",
       swipeThreshold: 50,
       freeScroll: false,
       navPrevEl: false,
@@ -32,7 +30,7 @@ const Home: NextPage = () => {
         touch: true,
         keydown: false,
       },
-      easing: (currentTime: any, startPos: any, endPos: any, interval: any) => {
+      easing: (currentTime, startPos, endPos, interval) => {
         return (
           -endPos * (currentTime /= interval) * (currentTime - 2) + startPos
         );
@@ -53,7 +51,6 @@ const Home: NextPage = () => {
       containerRef.current.pageable?.scrollToPage(scroll);
     }
   }, [scroll]);
-  const data = [<MainPage />, <AboutPage />];
   return (
     <>
       <Header />
@@ -64,11 +61,8 @@ const Home: NextPage = () => {
         <div data-anchor="about">
           <AboutPage />
         </div>
-        <div data-anchor="about1">
-          <AboutPage />
-        </div>
-        <div data-anchor="about2">
-          <AboutPage />
+        <div data-anchor="projects">
+          <Projects />
         </div>
       </div>
     </>
