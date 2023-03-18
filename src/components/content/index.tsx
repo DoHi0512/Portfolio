@@ -1,13 +1,18 @@
 import Link from "next/link";
-import { AiOutlineHome, AiFillGithub } from "react-icons/ai";
+import {
+  AiOutlineHome,
+  AiOutlineGithub,
+  AiOutlineYoutube,
+} from "react-icons/ai";
 import * as S from "./style";
 interface ContentProps {
   title: string;
   img: string;
   sentence: string;
   desc: string;
-  homepage: string;
-  github: string;
+  homepage?: string;
+  github?: string;
+  youtube?: string;
 }
 export const Content = ({
   title,
@@ -16,10 +21,11 @@ export const Content = ({
   img,
   homepage,
   github,
+  youtube,
 }: ContentProps) => {
   return (
-    <div className="h-[24rem] w-full">
-      <div className="text-3xl h-[3rem] flex items-center font-bold">
+    <div className="lg:h-[24rem] w- h-[60rem]">
+      <div className="text-5xl lg:text-3xl h-[3rem] flex items-center font-bold">
         {title}
       </div>
       <div className="w-full h-full">
@@ -34,15 +40,33 @@ export const Content = ({
               <div className="text-1 text-gray break-words w-4/5">{desc}</div>
             </div>
             <div className="h-[20%] grid grid-cols-3 w-[10rem]">
-              <a href={homepage} target="_blank">
+              <a
+                href={homepage}
+                target="_blank"
+                style={{ display: homepage ? "flex" : "none" }}
+              >
                 <S.Icon>
                   <AiOutlineHome size="2rem" />
                   <span>Homepage</span>
                 </S.Icon>
               </a>
-              <a href={github} target="_blank">
+              <a
+                href={youtube}
+                target="_blank"
+                style={{ display: youtube ? "flex" : "none" }}
+              >
                 <S.Icon>
-                  <AiFillGithub size="2rem" />
+                  <AiOutlineYoutube size="2rem" />
+                  <span>Youtube</span>
+                </S.Icon>
+              </a>
+              <a
+                href={github}
+                target="_blank"
+                style={{ display: github ? "flex" : "none" }}
+              >
+                <S.Icon>
+                  <AiOutlineGithub size="2rem" />
                   <span>Github</span>
                 </S.Icon>
               </a>
