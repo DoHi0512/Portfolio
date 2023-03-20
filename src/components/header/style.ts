@@ -13,7 +13,18 @@ export const HeaderNav = styled.div`
   height: 3.5rem;
 `;
 export const ProgressBar = styled.div`
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  height: 0.5rem;
-  border: 1px solid;
+  height: 0.15rem;
+`;
+interface ProgressProps {
+  moveX?: number;
+}
+export const Progress = styled.div<ProgressProps>`
+  width: 20%;
+  height: 100%;
+  background-color: #20c997;
+  transform: translateX(calc(20vw * ${(props) => props.moveX}));
+  transition: .5s;
 `;
