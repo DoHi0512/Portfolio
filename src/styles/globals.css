@@ -10,10 +10,12 @@
   font-weight: normal;
   font-style: normal;
 }
+
 .pg-wrapper {
   height: auto !important;
 }
 
-html {
-  width: 1000px;
+.slick-next:before,
+.slick-prev:before {
+  color: #20c997 !important;
 }
