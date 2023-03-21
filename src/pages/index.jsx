@@ -46,7 +46,6 @@ const Home = () => {
     loadPageable();
   }, []);
   useEffect(() => {
-    console.log(containerRef.current.pageable);
     if (containerRef.current) {
       containerRef.current.pageable?.scrollToPage(scroll);
     }
@@ -64,6 +63,8 @@ const Home = () => {
         <div data-anchor="projects">
           <Projects />
         </div>
+        <div data-anchor="HI">HI</div>
+        <div data-anchor="Hello">Hello</div>
       </div>
     </>
   );

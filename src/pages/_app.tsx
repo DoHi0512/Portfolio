@@ -6,6 +6,10 @@ export const ScrollState = atom({
   key: "scroll",
   default: 0,
 });
+export const PageState = atom({
+  key: "page",
+  default: 0,
+});
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
@@ -13,4 +17,4 @@ export default function App({ Component, pageProps }: AppProps) {
     </RecoilRoot>
   );
 }
-// 
+//

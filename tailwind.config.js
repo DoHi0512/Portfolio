@@ -22,6 +22,11 @@ module.exports = {
     },
     colors: {
       gray: "#777777",
+      green: "#A2D5C6",
+      bgGray: "#EBEBEB",
+      bgBlue: "#E1F5FE",
+      blue: "#039be5",
+      lightGray: "#cccccc",
     },
     mr: {
       left: "100rem",
