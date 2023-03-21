@@ -4,8 +4,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { Content } from "../content";
 import FadeIn from "react-fade-in/lib/FadeIn";
 import { useRecoilState } from "recoil";
-import { ScrollState } from "@/pages/_app";
+import { PageState, ScrollState } from "@/pages/_app";
 import { useState } from "react";
+import * as S from "./style";
 const sciport = {
   title: "부산국립과학관 아카이브",
   img: "/sciport.png",
@@ -25,8 +26,7 @@ const bmfo = {
 };
 export const Projects = () => {
   const [scroll, setScroll] = useRecoilState(ScrollState);
-  const [state, setState] = useState(1);
-  console.log(state);
+  const [page, setPage] = useRecoilState(PageState);
   const settings = {
     dots: true,
     infinite: true,
@@ -40,32 +40,23 @@ export const Projects = () => {
       visible={scroll == 2 ? true : false}
       transitionDuration={1000}
       delay={50}
-      className="w-full h-full flex justify-center relative items-center flex-col bg-bgBlue"
+      className="w-full h-full flex justify-center relative items-center flex-col bg-bgBlue;"
     >
-      <div className="lg:h-[4rem] first-letter:w-full flex justify-center items-center lg:text-5xl text-[6rem] text-[#4FA4A4A]">
-        Projects
-      </div>
-      <div className="lg:w-[60rem] lg:h-[30rem] h-[90rem] w-[70rem] border-[3px] border-[#A2D5C6] rounded-2xl flex items-center justify-center">
+      <div className="lg:w-[60rem] lg:h-[30rem] h-[90rem] w-[70rem] border-[3px] border-[#C8E6C9] rounded-2xl flex items-center justify-center shadow-[0px_4px_30px_rgba(0,_0,_0,_0.25)]">
         <div className="w-[90%] h-[90%]">
           <div className="w-full h-[2rem] border-b-[1px] flex items-center border-gray">
-            <div className="flex h-full items-center  border-gray">
-              <div
-                onClick={() => setState(1)}
-                className={`font-thin text-${
-                  state ? "black" : "gray"
-                }  w-[6rem] h-full flex items-center justify-center hover:bg-bgGray hover:text-[black] duration-300 hover:cursor-pointer`}
-              >
-                프로젝트 정보
-              </div>
-            </div>
-            <div
-              onClick={() => setState(0)}
-              className={`text-${
-                state ? "gray" : "black"
-              } w-[6rem] h-full flex items-center justify-center hover:bg-bgGray hover:text-[black] duration-300 hover:cursor-pointer`}
+            <S.Text
+              color={page ? "#cccccc" : "black"}
+              onClick={() => setPage(0)}
+            >
+              프로젝트
+            </S.Text>
+            <S.Text
+              color={page ? "black" : "#cccccc"}
+              onClick={() => setPage(1)}
             >
               세부 사항
-            </div>
+            </S.Text>
           </div>
           <Slider {...settings}>
             <Content {...bmfo} />
