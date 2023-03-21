@@ -11,6 +11,8 @@ export const HeaderLayout = styled.div`
 export const HeaderNav = styled.div`
   width: 100%;
   height: 3.5rem;
+  display : flex;
+  flex-direction : row;
 `;
 export const ProgressBar = styled.div`
   display: flex;
@@ -26,5 +28,12 @@ export const Progress = styled.div<ProgressProps>`
   height: 100%;
   background-color: #20c997;
   transform: translateX(calc(20vw * ${(props) => props.moveX}));
-  transition: .5s;
+  transition: 0.5s;
+`;
+
+export const HeaderText = styled.div`
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
