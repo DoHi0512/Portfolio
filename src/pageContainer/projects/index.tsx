@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Content } from "../content";
+import { Content } from "../../components/content";
 import FadeIn from "react-fade-in/lib/FadeIn";
 import { useRecoilState } from "recoil";
 import { PageState, ScrollState } from "@/pages/_app";
@@ -42,7 +42,7 @@ export const Projects = () => {
       delay={50}
       className="w-full h-full flex justify-center relative items-center flex-col bg-bgBlue;"
     >
-      <div className="lg:w-[60rem] lg:h-[30rem] h-[90rem] w-[70rem] border-[3px] border-[#C8E6C9] rounded-2xl flex items-center justify-center shadow-[0px_4px_30px_rgba(0,_0,_0,_0.25)]">
+      <div className="w-[60rem] h-[30rem] border-[3px] border-[#C8E6C9] rounded-2xl flex items-center justify-center shadow-[0px_4px_30px_rgba(0,_0,_0,_0.25)]">
         <div className="w-[90%] h-[90%]">
           <div className="w-full h-[2rem] border-b-[1px] flex items-center border-gray">
             <S.Text

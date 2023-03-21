@@ -20,7 +20,7 @@ export const AboutPage = () => {
             visible={scroll == 1 ? true : false}
             transitionDuration={1000}
             delay={50}
-            className="w-full grid lg:grid-cols-3 gap-[2rem] gap-y-[7rem] grid-cols-2"
+            className="w-full grid grid-cols-3 gap-[2rem] gap-y-[7rem]"
           >
             <S.Template>
               <S.ExpBox>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const DetailLayout = styled.div`
   width: 100%;
-  height: 24rem;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@ export const IconBox = styled.div`
 `;
 
 export const Template = styled.div`
-  
+
   display: flex;
   align-items: center;
   flex-direction: column;

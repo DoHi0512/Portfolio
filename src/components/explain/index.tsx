@@ -23,7 +23,7 @@ export const Explain = ({
   youtube,
 }: ContentProps) => {
   return (
-    <div className="lg:h-[24rem] h-[60rem]">
+    <div className="h-full">
       <div className="text-5xl lg:text-3xl h-[3rem] flex items-center font-bold">
         {title}
       </div>

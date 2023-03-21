@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { useRecoilState } from "recoil";
 import { ScrollState } from "./_app";
 import { Header } from "@/components/header";
-import { Projects } from "@/components/projects";
+import { Projects } from "@/pageContainer/projects";
 const Home = () => {
   const [scroll, setScroll] = useRecoilState(ScrollState);
   const containerRef = useRef(null);

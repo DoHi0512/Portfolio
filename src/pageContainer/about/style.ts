@@ -13,10 +13,8 @@ flex-col
 
 export const AboutBox = tw.div`
 shadow-[0px_4px_30px_rgba(0,_0,_0,_0.25)]
-w-[80rem]
-h-[100rem]
-lg:w-[60rem]
-lg:h-[30rem]
+w-[60rem]
+h-[30rem]
 border-[3px]
 border-[#A2D5C6]
 rounded-2xl
@@ -28,11 +26,10 @@ items-center
 
 export const Title = tw.div`
 w-full
-lg:h-[4rem]
+h-[4rem]
 flex justify-center
 items-center
-lg:text-5xl 
-text-[6rem]
+text-5xl 
 text-[#4FA4A4A]
 `;
 export const Template = tw.div`
