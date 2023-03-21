@@ -15,13 +15,12 @@ export const AboutPage = () => {
   return (
     <>
       <S.AboutLayout>
-        <S.Title>About</S.Title>
         <S.AboutBox>
           <FadeIn
             visible={scroll == 1 ? true : false}
             transitionDuration={1000}
             delay={50}
-            className="w-full grid grid-cols-3 gap-[2rem] gap-y-[7rem]"
+            className="w-full grid lg:grid-cols-3 gap-[2rem] gap-y-[7rem] grid-cols-2"
           >
             <S.Template>
               <S.ExpBox>

@@ -12,22 +12,27 @@ flex-col
 `;
 
 export const AboutBox = tw.div`
-w-[60rem]
-h-[30rem]
+shadow-[0px_4px_30px_rgba(0,_0,_0,_0.25)]
+w-[80rem]
+h-[100rem]
+lg:w-[60rem]
+lg:h-[30rem]
 border-[3px]
 border-[#A2D5C6]
 rounded-2xl
 flex
 justify-center
 items-center
+}
 `;
 
 export const Title = tw.div`
 w-full
-h-[4rem]
+lg:h-[4rem]
 flex justify-center
 items-center
-text-5xl 
+lg:text-5xl 
+text-[6rem]
 text-[#4FA4A4A]
 `;
 export const Template = tw.div`
@@ -40,12 +45,15 @@ justify-center
 
 `;
 export const Explain = tw.div`
-text-2xl
+lg:text-2xl
+text-6xl
 flex
 justify-center
 items-center
 `;
 export const Desc = tw.div`
+text-4xl
+lg:text-[1rem]
 mt-2
 flex
 justify-center
