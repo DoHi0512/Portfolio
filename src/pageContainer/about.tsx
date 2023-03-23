@@ -20,9 +20,9 @@ const AboutData = [
 ];
 export const AboutPage = () => {
   const [scroll, setScroll] = useRecoilState(ScrollState);
-  const AboutItem = AboutData.map((item) => {
+  const AboutItem = AboutData.map((item, idx) => {
     return (
-      <div>
+      <div key={idx}>
         <div className="flex flex-row justify-center">
           <div className="flex justify-center items-center mr-2 [&>svg]:w-[2rem] [&>svg]:h-[2rem]">
             {item.icon}
