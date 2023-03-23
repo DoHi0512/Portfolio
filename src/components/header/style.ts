@@ -3,7 +3,6 @@ export const HeaderLayout = styled.div`
   height: 4rem;
   width: 100%;
   position: fixed;
-  z-index: 1;
   display: flex;
   flex-direction: column;
 `;
