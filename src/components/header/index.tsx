@@ -4,15 +4,13 @@ import { useRecoilState } from "recoil";
 import * as S from "./style";
 export const Header = () => {
   const [scroll, setScroll] = useRecoilState(ScrollState);
+  const HeaderMap = ["Main", "About", "Projects", "Skills", "Career"];
+  const Head = HeaderMap.map((item, idx) => {
+    return <S.HeaderText onClick={() => setScroll(idx)}>{item}</S.HeaderText>;
+  });
   return (
     <S.HeaderLayout>
-      <S.HeaderNav>
-        <S.HeaderText>Main</S.HeaderText>
-        <S.HeaderText>About</S.HeaderText>
-        <S.HeaderText>Projects</S.HeaderText>
-        <S.HeaderText>Skills</S.HeaderText>
-        <S.HeaderText>Career</S.HeaderText>
-      </S.HeaderNav>
+      <S.HeaderNav>{Head}</S.HeaderNav>
       <S.ProgressBar>
         <S.Progress moveX={scroll}></S.Progress>
       </S.ProgressBar>

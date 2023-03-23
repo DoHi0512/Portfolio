@@ -10,38 +10,35 @@
   font-weight: normal;
   font-style: normal;
 }
-@media all and (max-width: 1024px) {
-  body,
-  html {
-    font-size: 100%;
-  }
-}
-@media all and (max-width: 300px) {
-  body,
-  html {
-    font-size: 100%;
-  }
-}
-@media all and (min-width: 1024px) {
-  body,
-  html {
-    font-size: 100%;
-  }
-}
-@media all and (min-width: 800px) {
-  body,
-  html {
-    font-size: 100%;
-  }
-}
-.pg-wrapper {
-  height: auto !important;
+
+.icon-box {
+  @apply h-[2rem] flex flex-row items-center w-4/5 text-[1.5rem] [&>span]:font-thin [&>img]:mr-[1rem] [&>img]:w-[1.5rem] [&>img]:h-[1.5rem] [&>img]:rounded-[50%] [&>img]:object-contain;
 }
 
-/* html {
-  width: 1000px;
-} */
+.template {
+  @apply [&>*]:mt-[1rem] flex items-center flex-col;
+}
+
+.title {
+  @apply w-full text-center text-[1.2rem] font-bold;
+}
+
+.icon {
+  @apply flex items-center flex-col w-full h-full justify-end hover:cursor-pointer [&>svg]:hover:text-lightGreen [&>svg]:hover:mb-[0.2rem] [&>span]:hover:opacity-100 [&>*]:hover:duration-300;
+}
+
+.nav-link {
+  @apply opacity-0 animate-fadeInLeft hover:cursor-pointer;
+}
+.pro-text {
+  @apply mr-[1.54rem] h-full flex justify-center items-center hover:text-[black] hover:duration-300 hover:cursor-pointer font-thin;
+}
+
 .slick-next:before,
 .slick-prev:before {
   color: #20c997 !important;
+}
+
+.slick-dots {
+  bottom: auto !important;
 }
