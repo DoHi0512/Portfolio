@@ -6,7 +6,11 @@ export const Header = () => {
   const [scroll, setScroll] = useRecoilState(ScrollState);
   const HeaderMap = ["Main", "About", "Projects", "Skills", "Career"];
   const Head = HeaderMap.map((item, idx) => {
-    return <S.HeaderText onClick={() => setScroll(idx)}>{item}</S.HeaderText>;
+    return (
+      <S.HeaderText onClick={() => setScroll(idx)} key={idx}>
+        {item}
+      </S.HeaderText>
+    );
   });
   return (
     <S.HeaderLayout>
