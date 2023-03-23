@@ -20,7 +20,7 @@ const AboutData = [
 ];
 export const AboutPage = () => {
   const [scroll, setScroll] = useRecoilState(ScrollState);
-  const AboutItem = AboutData.map((item, idx) => {
+  const AboutItem = AboutData.map((item,idx) => {
     return (
       <div key={idx}>
         <div className="flex flex-row justify-center">
