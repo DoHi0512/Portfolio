@@ -27,6 +27,7 @@ module.exports = {
       bgBlue: "#E1F5FE",
       blue: "#039be5",
       lightGray: "#cccccc",
+      lightGreen : "#20c997"
     },
     mr: {
       left: "100rem",
