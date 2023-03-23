@@ -1,9 +1,9 @@
+import FadeIn from "react-fade-in/lib/FadeIn";
 import {
   AiOutlineHome,
   AiOutlineGithub,
   AiOutlineYoutube,
 } from "react-icons/ai";
-import * as S from "./style";
 interface ContentProps {
   title: string;
   img: string;
@@ -23,15 +23,15 @@ export const Explain = ({
   youtube,
 }: ContentProps) => {
   return (
-    <div className="h-full">
-      <div className="text-5xl lg:text-3xl h-[3rem] flex items-center font-bold">
+    <FadeIn>
+      <div className="text-3xl h-[3rem] flex items-center font-bold">
         {title}
       </div>
       <div className="w-full h-full">
         <div className="w-full h-[70%] flex flex-row justify-between mt-2">
           <img
             src={img}
-            className="object-contain w-[25rem] border-[1px] border-gray rounded-[5px]"
+            className="object-contain w-[25rem] h-[17rem] border-[1px] border-gray rounded-[5px]"
           />
           <div className="w-[27rem]">
             <div className="h-[80%]">
@@ -44,35 +44,41 @@ export const Explain = ({
                 target="_blank"
                 style={{ display: homepage ? "flex" : "none" }}
               >
-                <S.Icon>
+                <div className="icon">
                   <AiOutlineHome size="2rem" />
-                  <span>Homepage</span>
-                </S.Icon>
+                  <span className="opacity-0 text-[0.5rem] text-gray">
+                    Homepage
+                  </span>
+                </div>
               </a>
               <a
                 href={youtube}
                 target="_blank"
                 style={{ display: youtube ? "flex" : "none" }}
               >
-                <S.Icon>
+                <div className="icon">
                   <AiOutlineYoutube size="2rem" />
-                  <span>Youtube</span>
-                </S.Icon>
+                  <span className="opacity-0 text-[0.5rem] text-gray">
+                    Youtube
+                  </span>
+                </div>
               </a>
               <a
                 href={github}
                 target="_blank"
                 style={{ display: github ? "flex" : "none" }}
               >
-                <S.Icon>
+                <div className="icon">
                   <AiOutlineGithub size="2rem" />
-                  <span>Github</span>
-                </S.Icon>
+                  <span className="opacity-0 text-[0.5rem] text-gray">
+                    Github
+                  </span>
+                </div>
               </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </FadeIn>
   );
 };

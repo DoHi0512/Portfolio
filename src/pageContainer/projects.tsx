@@ -1,12 +1,10 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Content } from "../../components/content";
+import { Content } from "../components/content";
 import FadeIn from "react-fade-in/lib/FadeIn";
 import { useRecoilState } from "recoil";
 import { PageState, ScrollState } from "@/pages/_app";
-import { useState } from "react";
-import * as S from "./style";
 const sciport = {
   title: "부산국립과학관 아카이브",
   img: "/sciport.png",
@@ -37,7 +35,7 @@ export const Projects = () => {
   };
   return (
     <FadeIn
-      visible={scroll == 2 ? true : false}
+      visible={1 ? true : false}
       transitionDuration={1000}
       delay={50}
       className="w-full h-full flex justify-center relative items-center flex-col bg-bgBlue;"
@@ -45,20 +43,21 @@ export const Projects = () => {
       <div className="w-[60rem] h-[30rem] border-[3px] border-[#C8E6C9] rounded-2xl flex items-center justify-center shadow-[0px_4px_30px_rgba(0,_0,_0,_0.25)]">
         <div className="w-[90%] h-[90%]">
           <div className="w-full h-[2rem] border-b-[1px] flex items-center border-gray">
-            <S.Text
-              color={page ? "#cccccc" : "black"}
+            <div
+              className={`pro-text ${page ? "text-gray" : "text-[black]"}`}
               onClick={() => setPage(0)}
             >
               프로젝트
-            </S.Text>
-            <S.Text
-              color={page ? "black" : "#cccccc"}
+            </div>
+            <div
+              className={`pro-text ${page ? "text-[black]" : "text-gray"}`}
               onClick={() => setPage(1)}
             >
               세부 사항
-            </S.Text>
+            </div>
           </div>
-          <Slider {...settings}>
+
+          <Slider {...settings} className="h-4/5 [&.slick-slider]:h-full">
             <Content {...bmfo} />
             <Content {...sciport} />
           </Slider>
