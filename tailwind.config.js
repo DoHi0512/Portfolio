@@ -7,19 +7,6 @@ module.exports = {
     "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    animationDelay: {
-      100: "100ms",
-      200: "200ms",
-      300: "300ms",
-      400: "400ms",
-      500: "500ms",
-      600: "600ms",
-      700: "700ms",
-      800: "800ms",
-      900: "900ms",
-      1000: "1000ms",
-      1100: "1100ms",
-    },
     colors: {
       gray: "#777777",
       green: "#A2D5C6",
@@ -27,31 +14,13 @@ module.exports = {
       bgBlue: "#E1F5FE",
       blue: "#039be5",
       lightGray: "#cccccc",
-      lightGreen : "#20c997"
-    },
-    mr: {
-      left: "100rem",
-    },
-    variants: {
-      animationDelay: ["responsive", "hover"],
+      lightGreen: "#20c997",
     },
     extend: {
       fontFamily: {
         sans: ["SeoulHangangM"],
       },
       keyframes: {
-        typingCursor: {
-          from: {
-            borderRight: "2px solid white",
-          },
-          to: { borderRight: "2px solid black" },
-        },
-        fadeIn: {
-          from: {
-            opacity: "0",
-          },
-          to: { opacity: "1" },
-        },
         fadeInLeft: {
           "0%": {
             opacity: "0",
@@ -64,9 +33,7 @@ module.exports = {
         },
       },
       animation: {
-        typingCursor: "typingCursor 1s ease-in-out 0ms 2",
-        fadeIn: "fadeIn 1s ease-in-out 4000ms 1 forwards",
-        fadeInLeft: "fadeInLeft 1s ease-in-out 4000ms 1 forwards",
+        fadeInLeft: "fadeInLeft 1s ease-in-out 4750ms 1 forwards",
       },
     },
   },

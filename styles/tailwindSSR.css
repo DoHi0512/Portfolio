@@ -9965,26 +9965,6 @@ video {
   }
 }
 
-@keyframes typingCursor {
-  from {
-    border-right: 2px solid white;
-  }
-
-  to {
-    border-right: 2px solid black;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -10017,16 +9997,8 @@ video {
   animation: bounce 1s infinite;
 }
 
-.animate-typingCursor {
-  animation: typingCursor 1s ease-in-out 0ms 2;
-}
-
-.animate-fadeIn {
-  animation: fadeIn 1s ease-in-out 4000ms 1 forwards;
-}
-
 .animate-fadeInLeft {
-  animation: fadeInLeft 1s ease-in-out 4000ms 1 forwards;
+  animation: fadeInLeft 1s ease-in-out 4750ms 1 forwards;
 }
 
 .cursor-auto {
@@ -18226,8 +18198,16 @@ video {
   content: none;
 }
 
+.animation-delay-75 {
+  animation-delay: 75ms;
+}
+
 .animation-delay-100 {
   animation-delay: 100ms;
+}
+
+.animation-delay-150 {
+  animation-delay: 150ms;
 }
 
 .animation-delay-200 {
@@ -18268,6 +18248,58 @@ video {
 
 .animation-delay-1100 {
   animation-delay: 1100ms;
+}
+
+.animation-delay-1200 {
+  animation-delay: 1200ms;
+}
+
+.animation-delay-1300 {
+  animation-delay: 1300ms;
+}
+
+.animation-delay-1400 {
+  animation-delay: 1400ms;
+}
+
+.animation-delay-1500 {
+  animation-delay: 1500ms;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2000ms;
+}
+
+.animation-delay-3000 {
+  animation-delay: 3000ms;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4000ms;
+}
+
+.animation-delay-5000 {
+  animation-delay: 5000ms;
+}
+
+.animation-delay-6000 {
+  animation-delay: 6000ms;
+}
+
+.animation-delay-7000 {
+  animation-delay: 7000ms;
+}
+
+.animation-delay-8000 {
+  animation-delay: 8000ms;
+}
+
+.animation-delay-9000 {
+  animation-delay: 9000ms;
+}
+
+.animation-delay-none {
+  animation-delay: 0s;
 }
 
 @media (min-width: 640px) {
@@ -27631,16 +27663,8 @@ video {
     animation: bounce 1s infinite;
   }
 
-  .sm\:animate-typingCursor {
-    animation: typingCursor 1s ease-in-out 0ms 2;
-  }
-
-  .sm\:animate-fadeIn {
-    animation: fadeIn 1s ease-in-out 4000ms 1 forwards;
-  }
-
   .sm\:animate-fadeInLeft {
-    animation: fadeInLeft 1s ease-in-out 4000ms 1 forwards;
+    animation: fadeInLeft 1s ease-in-out 4750ms 1 forwards;
   }
 
   .sm\:cursor-auto {
@@ -45157,16 +45181,8 @@ video {
     animation: bounce 1s infinite;
   }
 
-  .md\:animate-typingCursor {
-    animation: typingCursor 1s ease-in-out 0ms 2;
-  }
-
-  .md\:animate-fadeIn {
-    animation: fadeIn 1s ease-in-out 4000ms 1 forwards;
-  }
-
   .md\:animate-fadeInLeft {
-    animation: fadeInLeft 1s ease-in-out 4000ms 1 forwards;
+    animation: fadeInLeft 1s ease-in-out 4750ms 1 forwards;
   }
 
   .md\:cursor-auto {
@@ -62683,16 +62699,8 @@ video {
     animation: bounce 1s infinite;
   }
 
-  .lg\:animate-typingCursor {
-    animation: typingCursor 1s ease-in-out 0ms 2;
-  }
-
-  .lg\:animate-fadeIn {
-    animation: fadeIn 1s ease-in-out 4000ms 1 forwards;
-  }
-
   .lg\:animate-fadeInLeft {
-    animation: fadeInLeft 1s ease-in-out 4000ms 1 forwards;
+    animation: fadeInLeft 1s ease-in-out 4750ms 1 forwards;
   }
 
   .lg\:cursor-auto {
@@ -80209,16 +80217,8 @@ video {
     animation: bounce 1s infinite;
   }
 
-  .xl\:animate-typingCursor {
-    animation: typingCursor 1s ease-in-out 0ms 2;
-  }
-
-  .xl\:animate-fadeIn {
-    animation: fadeIn 1s ease-in-out 4000ms 1 forwards;
-  }
-
   .xl\:animate-fadeInLeft {
-    animation: fadeInLeft 1s ease-in-out 4000ms 1 forwards;
+    animation: fadeInLeft 1s ease-in-out 4750ms 1 forwards;
   }
 
   .xl\:cursor-auto {
@@ -97735,16 +97735,8 @@ video {
     animation: bounce 1s infinite;
   }
 
-  .\32xl\:animate-typingCursor {
-    animation: typingCursor 1s ease-in-out 0ms 2;
-  }
-
-  .\32xl\:animate-fadeIn {
-    animation: fadeIn 1s ease-in-out 4000ms 1 forwards;
-  }
-
   .\32xl\:animate-fadeInLeft {
-    animation: fadeInLeft 1s ease-in-out 4000ms 1 forwards;
+    animation: fadeInLeft 1s ease-in-out 4750ms 1 forwards;
   }
 
   .\32xl\:cursor-auto {
