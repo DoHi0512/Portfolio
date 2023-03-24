@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <SectionsContainer {...options} ref={containerRef}>
+      <SectionsContainer {...options} ref={containerRef} >
         <Section>
           <MainPage />
         </Section>
