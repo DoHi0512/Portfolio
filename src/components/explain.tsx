@@ -19,7 +19,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 300,
   arrows: false,
 };
 export const Explain = ({
@@ -33,24 +33,25 @@ export const Explain = ({
 }: ContentProps) => {
   return (
     <FadeIn>
-      <div className="text-3xl h-[3rem] flex items-center font-bold">
+      <div className="text-3xl h-[3rem] flex items-center font-bold mt-">
         {title}
       </div>
       <div className="w-full h-full">
-        <div className="w-full h-[70%] flex flex-row justify-between mt-2">
+        <div className="w-full h-[70%] flex flex-row justify-between mt-8 ">
           <Slider
-            className="[&>img]:object-contain w-[24rem] h-[17rem] border-[1px] border-gray rounded-[5px]"
+            className="w-[24rem] h-full"
             {...settings}
           >
-            <img src="./bmfo.png" />
-            <img src="./sciport.png" />
+            <img src="./bmfo1.png" />
+            <img src="./bmfo2.png" />
+            <img src="./bmfo3.png" />
           </Slider>
           <div className="w-[27rem]">
-            <div className="h-[80%]">
+            <div className="h-[60%]">
               <div className="text-[1.25rem] font-semibold">{sentence}</div>
               <div className="text-1 text-gray break-words w-4/5">{desc}</div>
             </div>
-            <div className="h-[20%] grid grid-cols-3 w-[10rem]">
+            <div className="grid grid-cols-3 w-[10rem]">
               <a
                 href={homepage}
                 target="_blank"

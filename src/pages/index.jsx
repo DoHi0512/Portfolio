@@ -12,6 +12,7 @@ const Home = () => {
   let options = {
     delay: 750,
     scrollBar: false,
+    activeClass: "1",
     navigation: false,
     anchors: ["Main", "About", "Projects"],
   };

@@ -47,14 +47,14 @@
 }
 
 .icon {
-  @apply flex items-center flex-col w-full h-full justify-end hover:cursor-pointer [&>svg]:hover:text-lightGreen [&>svg]:hover:mb-[0.2rem] [&>span]:hover:opacity-100 [&>*]:hover:duration-300;
+  @apply flex flex-col justify-end items-center w-full h-full [&>svg]:hover:text-lightGreen [&>svg]:hover:mb-[0.2rem]
 }
 
 .nav-link {
   @apply opacity-0 animate-fadeInLeft hover:cursor-pointer;
 }
 .pro-text {
-  @apply mr-[1.54rem] h-full flex justify-center items-center hover:text-[black] hover:duration-300 hover:cursor-pointer font-thin;
+  @apply mr-[1.54rem] h-full flex justify-center items-center hover:text-[black] hover:duration-300 hover:cursor-pointer;
 }
 
 .slick-next:before,
@@ -64,5 +64,9 @@
 }
 
 .slick-dots {
-  bottom: auto !important;
+  bottom: 2rem !important;
+}
+
+.full-image {
+  @apply absolute top-0 left-0 w-auto h-full;
 }
