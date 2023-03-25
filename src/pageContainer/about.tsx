@@ -24,7 +24,7 @@ export const AboutPage = () => {
     return (
       <div key={idx}>
         <div className="flex flex-row justify-center">
-          <div className="flex justify-center items-center mr-2 [&>svg]:w-[2rem] [&>svg]:h-[2rem]">
+          <div className="flex justify-center items-center mr-2 [&>svg]:w-[3rem] [&>svg]:h-[3rem]">
             {item.icon}
           </div>
           <div className="text-2xl flex justify-center items-center">
@@ -39,7 +39,7 @@ export const AboutPage = () => {
   });
   return (
     <div className="w-full h-full flex justify-center relative items-center flex-col">
-      <div className="shadow-[0px_4px_30px_rgba(0,_0,_0,_0.25)] w-[60rem] h-[30rem] border-[3px] border-[#A2D5C6] rounded-2xl flex justify-center items-center">
+      <div className="shadow-[0px_4px_30px_rgba(0,_0,_0,_0.25)] w-[65rem] h-[40rem] border-[3px] border-[#A2D5C6] rounded-2xl flex justify-center items-center">
         <FadeIn
           visible={1 ? true : false}
           transitionDuration={1000}
