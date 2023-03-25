@@ -15,7 +15,7 @@
 @media all and (min-width: 768px) and (max-width: 1023px) {
   html,
   body {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -23,7 +23,7 @@
 @media all and (max-width: 767px) {
   html,
   body {
-    font-size: 6px;
+    font-size: 5px;
   }
 }
 @font-face {
@@ -47,7 +47,7 @@
 }
 
 .icon {
-  @apply flex flex-col justify-end items-center w-full h-full [&>svg]:hover:text-lightGreen [&>svg]:hover:mb-[0.2rem]
+  @apply flex flex-col justify-end items-center w-full h-full [&>svg]:hover:text-lightGreen [&>svg]:hover:mb-[0.2rem];
 }
 
 .nav-link {
@@ -55,6 +55,14 @@
 }
 .pro-text {
   @apply mr-[1.54rem] h-full flex justify-center items-center hover:text-[black] hover:duration-300 hover:cursor-pointer;
+}
+
+.explain-image {
+  @apply bg-[black] object-contain h-[20rem];
+}
+
+.sort-center{
+  @apply flex justify-center items-center
 }
 
 .slick-next:before,
@@ -65,8 +73,4 @@
 
 .slick-dots {
   bottom: 2rem !important;
-}
-
-.full-image {
-  @apply absolute top-0 left-0 w-auto h-full;
 }
