@@ -23,10 +23,10 @@ export const MainPage = () => {
           Projects
         </a>
         <a className="nav-link" href="#About">
-          About
+          Skills
         </a>
         <a className="nav-link" href="#About">
-          About
+          Career
         </a>
       </div>
     </div>
