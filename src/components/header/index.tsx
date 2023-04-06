@@ -1,9 +1,9 @@
-import { ScrollState } from "@/pages/_app";
+import { PageState } from "@/pages/_app";
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import * as S from "./style";
 export const Header = () => {
-  const [scroll, setScroll] = useRecoilState(ScrollState);
+  const [scroll, setScroll] = useRecoilState(PageState);
   const HeaderMap = ["Main", "About", "Projects", "Skills", "Career"];
   const Head = HeaderMap.map((item, idx) => {
     return (

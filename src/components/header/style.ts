@@ -1,5 +1,6 @@
 import styled from "styled-components";
 export const HeaderLayout = styled.div`
+  z-index : 5;
   height: 4rem;
   width: 100%;
   position: fixed;
