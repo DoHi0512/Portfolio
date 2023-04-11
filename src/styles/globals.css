@@ -34,20 +34,12 @@
   font-style: normal;
 }
 
-.icon-box {
-  @apply h-[2rem] flex flex-row items-center w-4/5 text-[1.5rem] [&>span]:font-thin [&>img]:mr-[1rem] [&>img]:w-[1.5rem] [&>img]:h-[1.5rem] [&>img]:rounded-[50%] [&>img]:object-contain;
-}
-
 .template {
   @apply [&>*]:mt-[1rem] flex items-center flex-col;
 }
 
 .title {
   @apply w-full text-center text-[1.2rem] font-bold;
-}
-
-.icon {
-  @apply flex flex-col justify-end items-center w-full h-full [&>svg]:hover:text-lightGreen [&>svg]:hover:mb-[0.2rem];
 }
 
 .nav-link {
@@ -61,10 +53,21 @@
   @apply bg-[black] object-contain h-[20rem];
 }
 
-.sort-center{
-  @apply flex justify-center items-center
+.sort-center {
+  @apply flex justify-center items-center;
 }
 
+.icon-box {
+  @apply flex flex-col  [&>svg]:hover:text-[lightgreen] duration-300 [&>span]:hover:opacity-100 [&>svg]:hover:translate-y-[-.2rem] mr-4;
+}
+
+.icon {
+  @apply h-[2.5rem] w-[2.5rem] duration-300;
+}
+
+.icon-name {
+  @apply w-[2.5rem] flex justify-center items-center opacity-0 duration-300 text-gray text-[.8rem];
+}
 .slick-next:before,
 .slick-prev:before {
   color: #20c997 !important;
@@ -74,3 +77,5 @@
 .slick-dots {
   bottom: 2rem !important;
 }
+
+

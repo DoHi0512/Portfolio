@@ -1,11 +1,21 @@
 import { motion } from "framer-motion";
-export const DetailPage = () => {
+import { useRecoilState } from "recoil";
+import { PageState } from "./_app";
+import { useEffect } from "react";
+export const Detail = () => {
+  const [page, setPage] = useRecoilState(PageState);
+  useEffect(() => {
+    setPage(2);
+  }, []);
   return (
     <motion.div
-      className="w-screen h-screen bg-bgBlue"
+      className="w-screen"
       initial={{ scale: 0 }}
-      animate={{ scale: 1, transition : {duration : .3} }}
-    ></motion.div>
+      animate={{ scale: 1, transition: { duration: 0.6 } }}
+    >
+      
+    </motion.div>
   );
 };
-export default DetailPage;
+
+export default Detail;

@@ -18,12 +18,15 @@
       "@/*": ["./src/*"]
     }
   },
+
   "include": [
+    "mdx.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "src/pages/index.ksx",
-    "src/pageContainer/main/index.jsx"
-, "src/pages/index.jsx"  ],
+    "src/pageContainer/main/index.jsx",
+    "src/pages/index.jsx"
+  ],
   "exclude": ["node_modules"]
 }

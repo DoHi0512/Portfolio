@@ -1,7 +1,5 @@
+
 import { Typewriter } from "react-simple-typewriter";
-import { useRecoilState } from "recoil";
-import { ScrollState } from "@/pages/_app";
-import { useEffect } from "react";
 export const MainPage = () => {
   const words = ["안녕하세요", "프론트엔드 개발자", "이동훈입니다"];
   return (

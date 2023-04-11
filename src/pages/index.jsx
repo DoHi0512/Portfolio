@@ -1,35 +1,26 @@
 import { MainPage } from "@/pageContainer/main";
 import { AboutPage } from "@/pageContainer/about";
-import { useEffect, useRef } from "react";
-import { useRecoilState } from "recoil";
-import { ScrollState } from "./_app";
 import { Header } from "@/components/header";
 import { Projects } from "@/pageContainer/projects";
 import { SectionsContainer, Section } from "react-fullpage";
-
+import { useCallback, useEffect, useRef, useState } from "react";
+import ReactPageScroller from "react-page-scroller";
+import { useRecoilValue } from "recoil";
+import { PageState } from "./_app";
 const Home = () => {
-  const containerRef = useRef(null);
-  let options = {
-    delay: 750,
-    scrollBar: false,
-    activeClass: "1",
-    navigation: false,
-    anchors: ["Main", "About", "Projects"],
-  };
+  const page = useRecoilValue(PageState);
   return (
     <>
       <Header />
-      <SectionsContainer {...options} ref={containerRef} >
-        <Section>
-          <MainPage />
-        </Section>
-        <Section>
-          <AboutPage />
-        </Section>
-        <Section>
-          <Projects />
-        </Section>
-      </SectionsContainer>
+      <ReactPageScroller
+        // animationTimer={page == 2 ? 0 : 1000}
+        animationTimerBuffer={0}
+        customPageNumber={page}
+      >
+        <MainPage />
+        <AboutPage />
+        <Projects />
+      </ReactPageScroller>
     </>
   );
 };

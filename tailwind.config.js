@@ -2,6 +2,7 @@
 
 module.exports = {
   content: [
+    "./src/static/**/*.{mdx}",
     "./src/pages/*.{js,jsx,ts,tsx}",
     "./src/pageContainer/**/*.{js,jsx,ts,tsx}",
     "./src/components/**/*.{js,jsx,ts,tsx}",
@@ -31,11 +32,23 @@ module.exports = {
             transform: "translateZ(0)",
           },
         },
+        floating: {
+          "0%": {
+            transform: "translate(0,0)",
+          },
+          "100%": {
+            transform: "translate(0,10px)",
+          },
+        },
       },
       animation: {
         fadeInLeft: "fadeInLeft 1s ease-in-out 4750ms 1 forwards",
+        floating: "floating 1s infinite alternate",
       },
     },
   },
-  plugins: [require("tailwindcss-animation-delay")],
+  plugins: [
+    require("tailwindcss-animation-delay"),
+    require("@tailwindcss/typography"),
+  ],
 };
